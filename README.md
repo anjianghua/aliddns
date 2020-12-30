@@ -1,10 +1,23 @@
-# aliddns
-## 阿里云 DDNS ，通过阿里云DNS解析API来实现 DDNS 功能
+# aliddns 安装
 
-## AliDDNS 2.0 部署教程
-
-首先，登录你的服务器，安装必需组件：
-For CentOS：
-```
+### 在服务器上安装基础组件
+**CentOS:**
+```shell
 yum install -y wget curl cron
+```
+**Debian 8+/Ubuntu:**
+```shell
+apt install -y wget curl cron
+```
+### 然后下载AliDDNS脚本到你的服务器上：
+```shell
+wget -O /usr/sbin/AliDDNS-v2.0.sh https://ilemonrain.com/download/shell/AliDDNSv2.sh
+```
+### 为脚本文件加上可执行属性：
+```shell
+chmod +x /usr/sbin/AliDDNS-v2.0.sh
+```
+### 执行脚本，开始配置：
+```shell
+/usr/sbin/AliDDNS-v2.0.sh
 ```
